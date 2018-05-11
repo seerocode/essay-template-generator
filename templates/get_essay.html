@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Form Example</title>
+  </head>
+ 
+  <body>
+  	<!-- This was when I wrote those 50 lines of code I never needed! -->
+      <!-- {% if get_essay %}
+        <p>{{ get_essay }}</p>
+    {% endif %} -->
+
+    {% for n in range(paras | int) %}
+		<p>{{ get_essay }}</p>
+	{% endfor %}
+
+  </body>
+</html>
