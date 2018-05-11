@@ -10,9 +10,18 @@
         <p>{{ get_essay }}</p>
     {% endif %} -->
 
-    {% for n in range(paras | int) %}
-		<p>{{ get_essay }}</p>
-	{% endfor %}
+    <!-- If the word count is less than a paragraph, print potato n times -->
+    {% if word_count < 100 %}
+    	{% for n in range(word_count | int) %}
+    		{{ sample_word }}
+    	{% endfor %}
+    {% else %}
+    <!-- Otherwise, print the sample paragraph n times -->
+    	{% for n in range(paras | int) %}
+			<p>{{ get_essay }}</p>
+		{% endfor %}
+    {% endif %}
 
+    
   </body>
 </html>

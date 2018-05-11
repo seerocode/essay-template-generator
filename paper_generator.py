@@ -13,14 +13,19 @@ def get_essay():
 
 	# based on 100 words per paragraph
 	sample_paragraph = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, hjyyj. \n\n"
-	
+	sample_word = "potato "
+
 	# take in word count from form and convert to int
 	word_count = int(request.args.get("word_count"))
 
 	# calculate a paragraph count
 	paragraph_count = word_count/100
 
-	return render_template('get_essay.html', get_essay = sample_paragraph, paras=paragraph_count)
+	return render_template('get_essay.html', 
+		get_essay = sample_paragraph, 
+		paras=paragraph_count, 
+		word_count=word_count, 
+		sample_word=sample_word)
 
 
 if __name__ == "__main__":
