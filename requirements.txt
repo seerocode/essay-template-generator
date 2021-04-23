@@ -1,7 +1,7 @@
 click==6.7
 Flask==1.0.2
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 libxml2-python==2.9.7
 MarkupSafe==1.0
 Pygments==2.7.4
