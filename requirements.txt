@@ -5,4 +5,4 @@ Jinja2==2.10
 libxml2-python==2.9.7
 MarkupSafe==1.0
 Pygments==2.7.4
-Werkzeug==0.14.1
+Werkzeug==0.15.3
